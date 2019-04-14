@@ -1,2 +1,2 @@
 # Finance
-Python stock market application
+Python stock market application for S&P 500
