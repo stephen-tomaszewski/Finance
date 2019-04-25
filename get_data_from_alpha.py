@@ -3,6 +3,7 @@ import pandas
 import pickle
 from alpha_vantage.timeseries import TimeSeries
 import time
+import save_sp500_tickers
 
 
 def get_data_from_alpha(reload=False):
