@@ -26,12 +26,11 @@ def get_data_from_alpha(reload=False):
 #       can add NYSE: to symbol to define which exchange
 #       need to concert date/time to string and compare to slice/ammend data
 #       need to fix ticker arguement in get_daily_adjusted to use str.replace method
-    for ticker in tickers:
-        print(ticker)
+    for idx, ticker in enumerate(tickers):
+        print(idx, ":", ticker)
         if not os.path.exists('stock_dfs/{}.csv'.format(ticker.replace('.', '-'))):
             data, meta_data = TimeSeries(key='key.text', output_format='pandas').get_daily_adjusted(
                 symbol=ticker.replace('.', '-'), outputsize='full')
-           # print(data)
            # TODO: merge monthly adjusted, weekly adjusted, and daily adjusted to each csv to get more data and highest resolution
             data.to_csv('stock_dfs/{}.csv'.format(ticker.replace('.', '-')))
             time.sleep(10)

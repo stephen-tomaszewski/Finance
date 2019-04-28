@@ -1,5 +1,12 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-stock_dfs
+
+# devlopment folder
+sandbox
+
+# important information
 key.text
-sandbox.py
+
+
+# website
+mysite

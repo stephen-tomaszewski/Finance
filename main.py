@@ -1,6 +1,6 @@
 from save_sp500_tickers import save_sp500_tickers
 from get_data_from_alpha import get_data_from_alpha
-import sandbox
+from sanbox import sandbox
 import datetime
 
 '''
@@ -17,5 +17,5 @@ Doing stuff.
 # print(date == date_cur)
 
 # save_sp500_tickers()
-get_data_from_alpha()
-# sandbox.merge_data()
+# get_data_from_alpha()
+sandbox.merge_data()
