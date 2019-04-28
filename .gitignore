@@ -4,6 +4,9 @@ __pycache__/
 # devlopment folder
 sandbox
 
+#stock data
+stocks_dfs
+
 # important information
 key.text
 
