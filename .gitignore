@@ -1,15 +1,19 @@
+# Alpha Advantage stuff
+key.text
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
-# devlopment folder
+# Development folder
 sandbox
 
-#stock data
-stocks_dfs
+# Django stuff:
+*.log
+settings.py
+db.sqlite3
 
-# important information
-key.text
+# Environments
+venv/
 
-
-# website
-mysite
+# Stock data
+stock_dfs/

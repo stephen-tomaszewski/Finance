@@ -1,6 +1,7 @@
 from save_sp500_tickers import save_sp500_tickers
 from get_data_from_alpha import get_data_from_alpha
-from sanbox import sandbox
+from graph_data import graph_data
+from sandbox import sandbox
 import datetime
 
 '''
@@ -18,4 +19,5 @@ Doing stuff.
 
 # save_sp500_tickers()
 # get_data_from_alpha()
-sandbox.merge_data()
+# sandbox.convert_data()
+graph_data()
