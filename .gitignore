@@ -5,7 +5,7 @@ key.text
 __pycache__/
 
 # Development folder
-sandbox
+
 
 # Django stuff:
 *.log
@@ -16,4 +16,4 @@ db.sqlite3
 venv/
 
 # Stock data
-stock_dfs/
+
