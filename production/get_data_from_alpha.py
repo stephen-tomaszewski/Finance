@@ -1,5 +1,5 @@
 import os
-import pandas
+import pandas as pd
 import pickle
 from alpha_vantage.timeseries import TimeSeries
 import time
@@ -23,6 +23,7 @@ def get_data_from_alpha(reload=False):
 # TODO:  if reload_data else condition for getting stock prices
 #       current else statement doesn't allow updating stocks each today
 #       add ETFs and bonds like VOO
+#       add interest rate
 #       can add NYSE: to symbol to define which exchange
 #       need to concert date/time to string and compare to slice/ammend data
 #       need to fix ticker arguement in get_daily_adjusted to use str.replace method
@@ -36,10 +37,15 @@ def get_data_from_alpha(reload=False):
             time.sleep(10)
         else:
             print('Already have {}'.format(ticker))
+    return
 
 
-def combine_data():
+def convert_data():
     '''
-    Combine S&P 500
+    Convert data into pandas for plotting
     '''
+#   TODO:
+#       use pandas to read sql from database instead of csv files
+    df = pd.read_csv('stock_dfs/A.csv')
+    print(df.head())
     return

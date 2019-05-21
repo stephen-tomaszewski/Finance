@@ -1,7 +1,6 @@
 from save_sp500_tickers import save_sp500_tickers
 from get_data_from_alpha import get_data_from_alpha
-from graph_data import graph_data
-from sandbox import sandbox
+import graph_data as gd
 import datetime
 
 '''
@@ -20,4 +19,6 @@ Doing stuff.
 # save_sp500_tickers()
 # get_data_from_alpha()
 # sandbox.convert_data()
-graph_data()
+
+x = 'MSFT'
+gd.graph_data_subplot2grid(x)
