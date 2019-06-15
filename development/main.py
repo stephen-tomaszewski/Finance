@@ -117,7 +117,7 @@ def MakeTable():
             id INTEGER PRIMARY KEY,
             ticker TEXT UNIQUE,
             company TEXT UNIQUE,
-            sector TEXT UNIQUE)
+            sector TEXT)
             ''')
 
 # save the changes
@@ -136,13 +136,15 @@ def UpdateTable():
         companies = tuple(pickle.load(f))
     with open('sp500sectors.pickle', mode='rb') as f:
         sectors = tuple(pickle.load(f))
-        print(type(sectors))
+        print(type(tickers))
         conn = sqlite3.connect('stocks.db')
         c = conn.cursor()
+        temp = str(tickers)
+        print(type(temp))
 # need to convert input data into a string format to store in database
     for i in tickers:
         c.execute("INSERT INTO stocks (ticker, company, sector) VALUES (?, ?, ?)",
-                  (tickers, companies, sectors))
+                  (str(tickers), str(companies), str(sectors)))
 
     # save the changes
     conn.commit()
@@ -165,6 +167,6 @@ def InsertData():
     return None
 
 
-# MakeTable()
+MakeTable()
 Save500()
 UpdateTable()
